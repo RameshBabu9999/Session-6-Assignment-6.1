@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function paySalary() {
+    var employeeName = document.getElementById("name").value;
+    var working_hr = document.getElementById("hours").value;
+    var basicsalary = document.getElementById("salary").value;
+
+    if (basicsalary<=15000) {
+      var bonus = (0.05*basicsalary);
+       var regtime1 = (basicsalary+bonus);
+      var basicsalary = (regtime1);
+    } else if (basicsalary>15000 || working_hr > 10) {
+       var regtime = (salary+(0.1*salary));
+       var salary = (regtime);
+
+    }
+    document.getElementById("name").innerHTML = "Employee Name: " + employeeName;
+    document.getElementById("pay").innerHTML = "Employee Gross Pay: " + regtime1;
+}
+
+</script>
+
+<body>
+  <div>
+<input id="name" value="RameshBabu"></input>
+<input id="hours" value=10></input>
+<input id="salary" value=15000></input>
+<br>
+<span id="pay">0</span>
+<br>
+<button id="submit" onclick="paySalary()">Submit</button>
+</div>
+</body>
+</html>
